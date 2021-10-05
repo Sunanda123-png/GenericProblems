@@ -24,5 +24,41 @@ public class FindmaxTest
         int result=Findmax.max(20,10,30);
         assertEquals(30,result);
     }
+    @Test
+    public void floatMaxTC1()
+    {
+        float result=Findmax.max(5.5f,0.01f, 1.02f);
+        assertEquals(5.5f,result,0.0f);
+    }
+    @Test
+    public void floatMaxTC2()
+    {
+        float result=Findmax.max(0.01f,5.5f, 1.02f);
+        assertEquals(5.5f,result,0.0f);
+    }
+    public void floatMaxTC3()
+    {
+
+        float result=Findmax.max(0.01f,1.02f, 5.5f);
+        assertEquals(5.5f,result,0.0f);
+    }
+    @Test
+    public void StringMaxTC1()
+    {
+        String result=Findmax.max("Apple","Peach","Banana");
+        assertEquals("maximum result","Peach",result);
+    }
+    @Test
+    public void StringMaxTC2()
+    {
+        String result=Findmax.max("Apple","Bananna","Peach");
+        assertEquals("maximum result","Peach",result);
+    }
+    @Test
+    public void StringMaxTC3()
+    {
+        String result=Findmax.max("Peach","Bananna","Apple");
+        assertEquals("maximum result","Peach",result);
+    }
 
 }
