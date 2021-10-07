@@ -18,4 +18,20 @@ public class Findmax
         }
         return y;
     }
+    public static <T extends Comparable<T>> T max(T ... ele)
+    {
+        T max=null;
+        for (T value:ele)
+        {
+            if (max==null)
+            {
+                max=value;
+            }
+            if (value.compareTo(max)>0)
+            {
+                max=value;
+            }
+        }
+        return max;
+    }
 }
